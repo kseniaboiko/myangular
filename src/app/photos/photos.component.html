@@ -1,0 +1,13 @@
+<ol class = "tabs">
+  <li *ngFor="let tab of context"
+  
+  [class.selected]="tab === selectedTab"
+  (click)="onSelect(tab)">
+<!--<span class="badge">{{tab.id}}</span> -->
+{{tab.title}}
+<button (click)="onSelectClose(tab)">X</button>
+</li>
+</ol>
+<app-context [tab]="selectedTab"></app-context>
+
+
