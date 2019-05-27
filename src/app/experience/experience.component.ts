@@ -1,22 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Details} from "../details";
-const json = '{ "description": "Low score...", "date": "7-7-1984", "score": 7, "approved": false }';
-const d = JSON.parse(json) as Details;
-function tryAppend<T>(propName: string, act: () => T) {
-  let message;
- try {
-      message = act();
- } catch (e) {
-     message = `<span style="color: red">${e}</span>`;
- } finally {
-     const html = document.body.innerHTML;
-     document.body.innerHTML = `${html}<br/>${propName}: ${message}`;
-}
-}
+import { HttpClient } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
-tryAppend<boolean>('approved', () => d.approved);
-tryAppend<string>('description', () => d.description);
-tryAppend<number>('score', () => d.score);
+
 
 
 
@@ -28,12 +15,26 @@ tryAppend<number>('score', () => d.score);
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
+  
+  constructor (public httpService: HttpClient) { }
+  
+  arrBirds: string [];
+
+  ngOnInit () {
+    this.httpService.get('assets/Birds.json').subscribe(
+      data => {
+        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.
+        //  console.log(this.arrBirds[1]);
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err.message);
+      }
+    );
+  }
+  
 
   
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  
 
 }
