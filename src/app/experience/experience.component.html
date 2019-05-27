@@ -1,13 +1,13 @@
-<div class = "text22">
-  <p *ngIf="arrBirds">    
+
+  <div class = "text22" *ngIf="arrBirds">    
          
   
   
-    <h4 *ngFor="let bird of arrBirds">
+    <div class = "news" *ngFor="let bird of arrBirds">
         <h1>{{bird.Title}}</h1>
           <p>{{bird.News}}</p>
                 
-    </h4>
+    </div>
 </div>
 
 
