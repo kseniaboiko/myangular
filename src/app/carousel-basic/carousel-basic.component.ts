@@ -13,9 +13,9 @@ export class CarouselBasicComponent implements OnInit {
 
 
   carousels: Carousel[] = [
-    {id: 0, img: 'https://im.ezgif.com/tmp/ezgif-1-f7f3ce3fd039.jpg'},
-    {id: 1, img: 'https://im.ezgif.com/tmp/ezgif-1-6f7667e5b132.jpg'},
-    {id: 2, img: 'https://im.ezgif.com/tmp/ezgif-1-d73dd0b67391.jpg'}
+    {id: 0, img: 'assets/img/img1_wide.jpg'},
+    {id: 1, img: 'assets/img/img2_wide.jpg'},
+    {id: 2, img: 'assets/img/img3_wide.jpg'}
   ];
 
 

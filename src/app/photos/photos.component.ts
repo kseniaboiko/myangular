@@ -13,11 +13,12 @@ export class PhotosComponent implements OnInit {
 context: Tab[] = [
     { title: 'Tab1', way: 'assets/img/img1.jpg' },
     {  title: 'Tab2', way: 'assets/img/img2.jpg' },
-    {  title: 'Tab3', way: 'assets/img/img3.jpg' },
+    {  title: 'Tab3', way: 'assets/img/img3.jpg' }
   ];
 
   
-  selectedTab: Tab = this.context[0];
+  
+  selectedTab: Tab = this.context[1];
 
   constructor() { }
 
