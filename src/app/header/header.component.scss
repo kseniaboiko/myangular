@@ -1,12 +1,13 @@
 * {
   padding: 0px;
   margin: 0px;
-  //box-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
   color: #ffffff; 
   }
 
 a {
+  text-decoration: none;
   color: #000; }
 
 p {
@@ -21,34 +22,25 @@ ol {
 
 nav {
   display: inline-block;
-  width: 100%;
+  width: 100%; }
 
+.logo1 {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0px 0 50px;
+  }
+
+.nav1 {
   display: inline-block;
   width: 80%;
   vertical-align: middle;
   padding-top: 0px;
-  padding-left: 460px; 
-  padding-bottom: 50px;
+  padding-left: 420px; }
 
-}
-
-.logo1 {
-  display: inline-block;
-  vertical-align: left;
-  //padding: 0px 0px 0 0px;
-  padding-top: 10px;
-  }
-
-.nav1 {
- 
-}
-
-a {
+.knopki {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding-right: 70px;
-
 }
   .knopki button {
     color: black;
@@ -63,5 +55,3 @@ a {
     .knopki button .active {
       background-color: dodgerblue;
       color: white; }
-
-  

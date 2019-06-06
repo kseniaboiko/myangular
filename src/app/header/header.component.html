@@ -2,11 +2,11 @@
   <div class="logo1">
               <a href="#"><img src="assets/img/logo.PNG" alt="Лого"></a>
   </div>	
- <div class = "nav1" *ngIf="arrBirds">
-  <div class="knopki" *ngFor="let bird of arrBirds">	 
+ <div class = "nav1" >
+  <div class="knopki" routerLinkActive="active" >	 
                             
-     <p> <a  routerLink="/experience" routerLinkActive="active" >{{bird.Name}}</a></p>
-      
+   <!-- <p> <a  routerLink="/experience" routerLinkActive="active" >{{bird.Name}}</a></p>-->
+     <li *ngFor="let m of Menu"><a class="link" routerLink={{m.Path}}>{{m.Name}}</a></li>
   </div>
   
 </div> 

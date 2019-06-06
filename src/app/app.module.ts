@@ -12,10 +12,14 @@ import { ExperienceComponent } from './experience/experience.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ContextComponent } from './context/context.component';
 import { CarouselBasicComponent } from './carousel-basic/carousel-basic.component';
+import { RegistrationComponent } from './registration/registration.component';
+//import {PhotosComponent } from './photos/photos.component';
 const appRoutes: Routes = [
-  { path: 'experience', component: ExperienceComponent },
-  
+  { path: 'aboutus', component: PhotosComponent }, 
+  { path: 'registration', component: RegistrationComponent },  
 ];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,16 +29,21 @@ const appRoutes: Routes = [
     ExperienceComponent,
     PhotosComponent,
     ContextComponent,
-   CarouselBasicComponent
+   CarouselBasicComponent,
+   RegistrationComponent
   ],
   imports: [
     BrowserModule,
    // AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    RouterModule.forRoot([
+      //appRoutes,
+      //{ enableTracing: true } // <-- debugging purposes only
+   
+   
+      { path: 'aboutus', component: PhotosComponent },
+      { path: 'registration', component: RegistrationComponent }, 
+       ]   )
   
   ],
   providers: [],
