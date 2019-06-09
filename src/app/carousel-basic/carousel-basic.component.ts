@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Carousel } from '../carousel'
+import { Carousel } from '../carousel';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 @Component({
